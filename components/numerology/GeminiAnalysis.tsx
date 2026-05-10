@@ -43,9 +43,6 @@ export function GeminiAnalysis({ profile, userName }: Props) {
   return (
     <div className="relative mt-16 border-t border-border pt-12">
       <div className="mb-10 text-center">
-        <p className="mb-3 text-[11px] uppercase tracking-[0.32em] text-spirit/75">
-          Yapay zekâ yorumu
-        </p>
         <h3 className="font-heading text-2xl font-light text-foreground md:text-3xl">
           Mühendisten özel analiz
         </h3>
