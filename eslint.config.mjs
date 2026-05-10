@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Netlify plugin output (local preview / CI artifacts — not app source)
+    ".netlify/**",
   ]),
 ]);
 

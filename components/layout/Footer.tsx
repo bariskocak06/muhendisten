@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <Link href="/" className="font-heading text-2xl text-foreground tracking-wide">
-              Mühendis'ten
+              Mühendis&apos;ten
             </Link>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-sm font-light">
               Esansiyel yağlar, doğal taşlar ve niyet cümleleri — acelesi olmayan,
@@ -88,7 +88,7 @@ export function Footer() {
 
         <div className="mt-16 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; 2026 Mühendis'ten. Tüm hakları saklıdır.
+            &copy; 2026 Mühendis&apos;ten. Tüm hakları saklıdır.
           </p>
           <Link
             href="/cakra-testi"

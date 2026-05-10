@@ -27,7 +27,7 @@ export default function AboutPage() {
           className="space-y-8"
         >
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Mühendis'ten olarak her insanın kendine özgü bir enerji frekansı
+            Mühendis&apos;ten olarak her insanın kendine özgü bir enerji frekansı
             taşıdığına inanır. Bu frekansı keşfetmek, dengelemek ve
             güçlendirmek için doğanın en saf hediyelerini — esansiyel yağları ve
             doğal taşları — bir araya getiriyoruz.

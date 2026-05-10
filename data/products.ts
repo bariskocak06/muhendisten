@@ -21,7 +21,8 @@ export const products: Product[] = [
     name: "Köklenme Yağı",
     chakra: "Kök Çakra",
     chakraColor: "#8B0000",
-    theme: "Güven, Topraklanma, Beden",
+    theme:
+      "Topraklanma ve güven enerjisini günlük ritüeline eklemek isteyenler için kişisel bir niyet yağı.",
     description:
       "Paçuli, sedir ağacı ve vetiver notalarıyla hazırlanmış; güven, topraklanma ve bedenle bağ temasına odaklanan niyet yağıdır.",
     ingredients: ["Paçuli", "Sedir Ağacı", "Vetiver", "Zencefil"],
@@ -37,7 +38,8 @@ export const products: Product[] = [
     name: "Akış Yağı",
     chakra: "Sakral Çakra",
     chakraColor: "#D2691E",
-    theme: "Yaratıcılık, Duygu, Haz",
+    theme:
+      "Yaratıcılık ve duygusal akış için — kendine veya özel birine anlamlı, enerjisi düşünülmüş bir hediye.",
     description:
       "Ylang ylang, portakal ve sandal ağacı ile harmanlanmış; yaratıcılık, duygu ve haz temasına odaklanan niyet yağıdır.",
     ingredients: ["Ylang Ylang", "Portakal", "Sandal Ağacı", "Yasemin"],
@@ -53,7 +55,8 @@ export const products: Product[] = [
     name: "Güç Yağı",
     chakra: "Solar Pleksus",
     chakraColor: "#DAA520",
-    theme: "Özgüven, İrade, İçsel Güç",
+    theme:
+      "İç gücünü ve iradeni hatırlamak isteyenler için özenle harmanlanmış butik formül.",
     description:
       "Limon, bergamot ve biberiye ile hazırlanmış; özgüven, irade ve içsel güç temasına odaklanan niyet yağıdır.",
     ingredients: ["Limon", "Bergamot", "Biberiye", "Zencefil"],
@@ -69,7 +72,8 @@ export const products: Product[] = [
     name: "Kalp Açılım Yağı",
     chakra: "Kalp Çakrası",
     chakraColor: "#2E8B57",
-    theme: "Sevgi, Şefkat, Bağ",
+    theme:
+      "Kalp alanında yumuşama ve bağ kurma niyeti taşıyanlar için; sevgiyi hatırlatan bir ritüel eşlikçisi.",
     description:
       "Gül, lavanta ve sardunya ile harmanlanmış; sevgi, şefkat ve bağ temasına odaklanan niyet yağıdır.",
     ingredients: ["Gül", "Lavanta", "Sardunya", "Palmarosa"],
@@ -85,7 +89,8 @@ export const products: Product[] = [
     name: "İfade Yağı",
     chakra: "Boğaz Çakrası",
     chakraColor: "#4682B4",
-    theme: "İfade, İletişim, Gerçeği Söyleme",
+    theme:
+      "Sesini netleştirmek ve iletişimde daha oturmak isteyenler için günlük ifade ritüeline uygun.",
     description:
       "Nane, okaliptüs ve adaçayı ile hazırlanmış; ifade, iletişim ve gerçeği söyleme temasına odaklanan niyet yağıdır.",
     ingredients: ["Nane", "Okaliptüs", "Adaçayı", "Papatya"],
@@ -101,7 +106,8 @@ export const products: Product[] = [
     name: "Sezgi Yağı",
     chakra: "Üçüncü Göz",
     chakraColor: "#483D8B",
-    theme: "Sezgi, Odak, İçgörü",
+    theme:
+      "Sezgine kulak vermek ve odaklanmak isteyenler için sessiz anlara eşlik eden bir karışım.",
     description:
       "Lavanta, günlük ve sandal ağacı ile harmanlanmış; sezgi, odak ve içgörü temasına odaklanan niyet yağıdır.",
     ingredients: ["Lavanta", "Günlük", "Sandal Ağacı", "Ardıç"],
@@ -117,7 +123,8 @@ export const products: Product[] = [
     name: "Yüksek Bilinç Yağı",
     chakra: "Taç Çakra",
     chakraColor: "#7B68EE",
-    theme: "Ruhsallık, Evrensel Bağlantı",
+    theme:
+      "Ruhsal bağ ve dinginlik ritüeli arayanlar için meditasyon veya gece öncesi yumuşak bir kapanış.",
     description:
       "Günlük, mür ve lotus ile hazırlanmış; ruhsallık ve evrensel bağlantı temasına odaklanan niyet yağıdır.",
     ingredients: ["Günlük", "Mür", "Lotus", "Lavanta"],

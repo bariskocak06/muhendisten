@@ -129,6 +129,22 @@ body {
       0 24px 56px -14px rgba(139, 92, 246, 0.14),
       0 12px 40px -10px rgba(52, 211, 153, 0.1);
   }
+
+  /* Çakra grid kartı — hover’da çakra rengine göre aura */
+  .card-aurora.chakra-card-dynamic {
+    transition:
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.5s ease,
+      border-color 0.5s ease;
+  }
+  .card-aurora.chakra-card-dynamic:hover {
+    border-color: rgba(255, 255, 255, 0.82);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.92) inset,
+      0 28px 64px -18px color-mix(in srgb, var(--chakra-color, #6366f1) 32%, transparent),
+      0 14px 48px -16px rgba(110, 90, 122, 0.13),
+      0 0 0 1px color-mix(in srgb, var(--chakra-color, #6366f1) 18%, transparent);
+  }
 }
 
 @keyframes aurora-drift-1 {

@@ -34,7 +34,7 @@ export function Navbar() {
           href="/"
           className="font-heading text-2xl tracking-wide text-foreground transition-colors hover:text-accent sm:text-[1.65rem] md:text-3xl lg:text-[2rem] cursor-pointer"
         >
-          Mühendis'ten
+          Mühendis&apos;ten
         </Link>
 
         <div className="hidden items-center gap-8 md:flex lg:gap-11">
