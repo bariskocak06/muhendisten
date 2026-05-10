@@ -32,12 +32,13 @@ export default function NumerologyPage() {
 
   if (profile) {
     return (
-      <div className="px-6 pb-24 pt-32 md:pt-36">
+      <div className="px-4 pb-24 pt-[calc(7rem+env(safe-area-inset-top,0px))] sm:px-6 md:pt-36">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6">
             <button
+              type="button"
               onClick={handleReset}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors border border-border px-4 py-2 hover:border-foreground/30 cursor-pointer"
+              className="min-h-[44px] touch-manipulation rounded-md border border-border px-5 py-2.5 text-sm text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground"
             >
               Yeni Analiz
             </button>
@@ -49,7 +50,7 @@ export default function NumerologyPage() {
   }
 
   return (
-    <div className="flex min-h-[100dvh] items-center justify-center px-6 pb-24 pt-32 md:pt-36">
+    <div className="flex min-h-[100dvh] items-center justify-center px-4 pb-24 pt-[calc(7rem+env(safe-area-inset-top,0px))] sm:px-6 md:pt-36">
       <div className="flex flex-col items-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -60,10 +61,10 @@ export default function NumerologyPage() {
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
             Numeroloji & Enerji Analizi
           </p>
-          <h1 className="font-heading text-5xl md:text-7xl font-light text-foreground mb-6">
+          <h1 className="font-heading mb-6 text-[clamp(2rem,10vw,4.5rem)] font-light text-foreground md:text-7xl">
             Ruhunun İzini Sür
           </h1>
-          <p className="text-muted-foreground max-w-lg mx-auto leading-relaxed">
+          <p className="mx-auto max-w-lg px-1 text-pretty leading-relaxed text-muted-foreground">
             Kadim bilgilerin ışığında, isminiz ve doğum anınızın sakladığı
             potansiyeli keşfedin. Frekansınız, kaderinizdir.
           </p>

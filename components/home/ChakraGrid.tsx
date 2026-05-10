@@ -64,7 +64,7 @@ export function ChakraGrid() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_60%_at_50%_18%,rgba(255,255,255,0.48),transparent_65%)]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export function ChakraGrid() {
           <p className="mb-4 text-[11px] uppercase tracking-[0.38em] text-spirit/75">
             Yedi enerji merkezi
           </p>
-          <h2 className="font-heading text-4xl font-light leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-[3.35rem]">
+          <h2 className="font-heading text-[clamp(1.65rem,5.5vw,3.35rem)] font-light leading-[1.12] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-[3.35rem]">
             Hangi çakra bugün{" "}
             <span className="bg-gradient-to-r from-indigo-500/85 via-teal-600/75 to-rose-500/80 bg-clip-text italic text-transparent">
               seninle konuşuyor?

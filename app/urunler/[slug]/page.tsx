@@ -13,8 +13,8 @@ export default function ProductDetailPage() {
 
   if (!product) {
     return (
-      <div className="px-6 pb-24 pt-32 text-center md:pt-36">
-        <h1 className="font-heading text-4xl mb-4">Ürün Bulunamadı</h1>
+      <div className="px-4 pb-24 pt-[calc(7rem+env(safe-area-inset-top,0px))] text-center sm:px-6 md:pt-36">
+        <h1 className="font-heading mb-4 text-3xl sm:text-4xl">Ürün Bulunamadı</h1>
         <Link href="/urunler" className="text-accent hover:underline cursor-pointer">
           Ürünlere Dön
         </Link>
@@ -32,17 +32,17 @@ export default function ProductDetailPage() {
     .slice(0, 3);
 
   return (
-    <div className="px-6 pb-16 pt-28 md:pt-32">
+    <div className="px-4 pb-16 pt-[calc(6.5rem+env(safe-area-inset-top,0px))] sm:px-6 md:pt-32">
       <div className="max-w-5xl mx-auto">
         <Link
           href="/urunler"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-10 cursor-pointer"
+          className="mb-10 inline-flex min-h-[44px] touch-manipulation items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
           <ArrowLeft className="w-4 h-4" strokeWidth={1.5} />
           Tüm Ürünler
         </Link>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -72,7 +72,7 @@ export default function ProductDetailPage() {
               </span>
             </div>
 
-            <h1 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-2">
+            <h1 className="font-heading text-[clamp(1.75rem,6vw,3rem)] font-light text-foreground mb-2 break-words md:text-5xl">
               {product.name}
             </h1>
 
@@ -108,7 +108,7 @@ export default function ProductDetailPage() {
                 <h3 className="text-xs uppercase tracking-widest text-muted-foreground mb-2">
                   Niyet Cümlesi
                 </h3>
-                <p className="font-heading italic text-lg text-foreground/80">
+                <p className="font-heading text-lg italic leading-relaxed text-foreground/80 break-words">
                   &ldquo;{product.intention}&rdquo;
                 </p>
               </div>
@@ -124,7 +124,7 @@ export default function ProductDetailPage() {
             </div>
 
             <div className="border-t border-border pt-6">
-              <div className="flex items-center gap-4 mb-6">
+              <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
                 <span className="font-heading text-3xl text-foreground">
                   {product.price.toLocaleString("tr-TR")} TL
                 </span>
@@ -139,7 +139,7 @@ export default function ProductDetailPage() {
                 href={product.shopifyLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-accent text-accent-foreground text-[12px] tracking-[0.2em] uppercase hover:opacity-90 transition-opacity duration-200 cursor-pointer shadow-[0_12px_36px_-10px_rgba(143,115,88,0.5)]"
+                className="inline-flex min-h-[48px] w-full touch-manipulation items-center justify-center gap-2 bg-accent px-8 py-3.5 text-[12px] uppercase tracking-[0.2em] text-accent-foreground shadow-[0_12px_36px_-10px_rgba(143,115,88,0.5)] transition-opacity duration-200 hover:opacity-90 sm:w-auto"
               >
                 Satın Al
                 <ExternalLink className="w-3.5 h-3.5" strokeWidth={1.5} />
@@ -148,18 +148,18 @@ export default function ProductDetailPage() {
           </motion.div>
         </div>
 
-        <div className="mt-24 border-t border-border pt-16">
-          <h2 className="font-heading text-3xl font-light text-center mb-10">
+        <div className="mt-16 border-t border-border pt-12 md:mt-24 md:pt-16">
+          <h2 className="font-heading mb-8 text-center text-2xl font-light text-foreground sm:mb-10 sm:text-3xl">
             İlgili Ürünler
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
             {relatedProducts.map((p) => (
               <Link
                 key={p.slug}
                 href={`/urunler/${p.slug}`}
                 className="block cursor-pointer group"
               >
-                <div className="rounded-2xl card-spirit p-8 transition-all duration-300">
+                <div className="card-spirit rounded-2xl p-6 transition-all duration-300 sm:p-8">
                   <div
                     className="w-6 h-6 rounded-full mb-4 opacity-60"
                     style={{ backgroundColor: p.chakraColor }}

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { AuroraProfile } from "@/lib/numerology/types";
+import { GeminiAnalysis } from "./GeminiAnalysis";
 import { NumberCard } from "./NumberCard";
 
 interface Props {
@@ -20,9 +21,9 @@ function EnergyBar({
 }) {
   return (
     <div className="mb-4">
-      <div className="flex justify-between text-xs text-muted-foreground mb-2 tracking-wider">
-        <span>{label}</span>
-        <span className="text-foreground">%{value}</span>
+      <div className="mb-2 flex flex-col gap-0.5 text-xs tracking-wider text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+        <span className="min-w-0 leading-snug">{label}</span>
+        <span className="shrink-0 text-foreground">%{value}</span>
       </div>
       <div className="h-1 bg-border overflow-hidden">
         <motion.div
@@ -39,17 +40,17 @@ function EnergyBar({
 
 export function ResultDashboard({ profile, userName }: Props) {
   return (
-    <div className="w-full max-w-6xl mx-auto">
+    <div className="mx-auto w-full max-w-6xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-16"
+        className="mb-12 text-center sm:mb-16"
       >
-        <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-3">
+        <p className="mb-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
           Frekans Haritası
         </p>
-        <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-4">
+        <h2 className="font-heading mb-4 break-words text-[clamp(1.75rem,6vw,3rem)] font-light text-foreground md:text-5xl">
           {userName}
         </h2>
         <p className="text-muted-foreground max-w-md mx-auto leading-relaxed">
@@ -57,7 +58,7 @@ export function ResultDashboard({ profile, userName }: Props) {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      <div className="mb-12 grid grid-cols-1 gap-5 sm:gap-6 md:mb-16 md:grid-cols-2 lg:grid-cols-3">
         <NumberCard
           title="Kader Yolu"
           value={profile.lifePathNumber}
@@ -101,14 +102,14 @@ export function ResultDashboard({ profile, userName }: Props) {
         )}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+      <div className="mb-12 grid grid-cols-1 gap-5 sm:gap-6 md:mb-16 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-white border border-border p-8"
+          className="border border-border bg-white p-5 sm:p-8"
         >
-          <h3 className="font-heading text-2xl text-foreground mb-8">
+          <h3 className="font-heading mb-6 text-xl text-foreground sm:mb-8 sm:text-2xl">
             Biyofrekans Dengesi
           </h3>
           <EnergyBar
@@ -142,9 +143,9 @@ export function ResultDashboard({ profile, userName }: Props) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="bg-white border border-border p-8"
+          className="border border-border bg-white p-5 sm:p-8"
         >
-          <h3 className="font-heading text-2xl text-foreground mb-8">
+          <h3 className="font-heading mb-6 text-xl text-foreground sm:mb-8 sm:text-2xl">
             Karmik Matris
           </h3>
 
@@ -195,6 +196,8 @@ export function ResultDashboard({ profile, userName }: Props) {
           </div>
         </motion.div>
       </div>
+
+      <GeminiAnalysis profile={profile} userName={userName} />
     </div>
   );
 }

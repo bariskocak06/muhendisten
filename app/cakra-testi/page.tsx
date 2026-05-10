@@ -38,7 +38,7 @@ export default function ChakraTestPage() {
     const color = chakraColors[result as ChakraKey];
 
     return (
-      <div className="flex min-h-[100dvh] items-center justify-center px-6 pb-16 pt-28 md:pt-32">
+      <div className="flex min-h-[100dvh] items-center justify-center px-4 pb-16 pt-[calc(6.5rem+env(safe-area-inset-top,0px))] sm:px-6 md:pt-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,17 +68,17 @@ export default function ChakraTestPage() {
             &ldquo;{product?.intention}&rdquo;
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href={`/urunler/${productSlug}`}
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-accent text-accent-foreground text-[12px] tracking-[0.2em] uppercase hover:opacity-90 transition-opacity cursor-pointer shadow-[0_12px_36px_-10px_rgba(143,115,88,0.45)]"
+              className="inline-flex min-h-[48px] touch-manipulation items-center justify-center gap-2 bg-accent px-8 py-3.5 text-[12px] uppercase tracking-[0.2em] text-accent-foreground shadow-[0_12px_36px_-10px_rgba(143,115,88,0.45)] transition-opacity hover:opacity-90"
             >
               Bu Yağı Keşfet
               <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
             </Link>
             <Link
               href="/urunler/7li-cakra-seti"
-              className="inline-flex items-center justify-center px-8 py-3.5 border border-foreground/20 text-foreground text-[13px] tracking-widest uppercase hover:border-foreground/50 transition-colors cursor-pointer"
+              className="inline-flex min-h-[48px] touch-manipulation items-center justify-center border border-foreground/20 px-8 py-3.5 text-[13px] uppercase tracking-widest text-foreground transition-colors hover:border-foreground/50"
             >
               7&apos;li Seti Keşfet
             </Link>
@@ -91,7 +91,7 @@ export default function ChakraTestPage() {
   const question = quizQuestions[currentStep];
 
   return (
-    <div className="flex min-h-[100dvh] items-center justify-center px-6 pb-16 pt-28 md:pt-32">
+    <div className="flex min-h-[100dvh] items-center justify-center px-4 pb-16 pt-[calc(6.5rem+env(safe-area-inset-top,0px))] sm:px-6 md:pt-32">
       <div className="w-full max-w-xl">
         <div className="mb-10 flex gap-1.5">
           {quizQuestions.map((_, i) => (
@@ -118,18 +118,19 @@ export default function ChakraTestPage() {
               Soru {currentStep + 1} / {quizQuestions.length}
             </p>
 
-            <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground mb-10">
+            <h2 className="font-heading mb-8 text-2xl font-light leading-snug text-foreground sm:mb-10 sm:text-3xl md:text-4xl">
               {question.question}
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {question.options.map((option) => (
                 <motion.button
+                  type="button"
                   key={option.text}
                   whileHover={{ backgroundColor: "var(--muted)" }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => handleAnswer(option.chakra)}
-                  className="text-left px-5 py-4 border border-border bg-white text-foreground hover:border-foreground/30 transition-colors duration-200 cursor-pointer"
+                  className="min-h-[48px] cursor-pointer touch-manipulation border border-border bg-white px-4 py-4 text-left text-[15px] leading-snug text-foreground transition-colors duration-200 hover:border-foreground/30 sm:px-5"
                 >
                   {option.text}
                 </motion.button>

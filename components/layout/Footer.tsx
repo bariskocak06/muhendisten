@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/80 mt-24 bg-gradient-to-b from-transparent to-muted/30">
-      <div className="max-w-6xl mx-auto px-6 py-16">
+    <footer className="mt-24 border-t border-border/80 bg-gradient-to-b from-transparent to-muted/30 pb-[max(3rem,env(safe-area-inset-bottom,0px)+1.5rem)]">
+      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <Link href="/" className="font-heading text-2xl text-foreground tracking-wide">
@@ -23,7 +23,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/urunler"
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors cursor-pointer"
+                  className="inline-flex min-h-[40px] items-center text-sm text-foreground/70 transition-colors hover:text-foreground"
                 >
                   Ürünler
                 </Link>
@@ -31,7 +31,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/cakra-testi"
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors cursor-pointer"
+                  className="inline-flex min-h-[40px] items-center text-sm text-foreground/70 transition-colors hover:text-foreground"
                 >
                   Çakra Testi
                 </Link>
@@ -39,7 +39,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/numeroloji"
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors cursor-pointer"
+                  className="inline-flex min-h-[40px] items-center text-sm text-foreground/70 transition-colors hover:text-foreground"
                 >
                   Nümeroloji
                 </Link>
@@ -57,7 +57,7 @@ export function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors cursor-pointer"
+                  className="inline-flex min-h-[40px] items-center text-sm text-foreground/70 transition-colors hover:text-foreground"
                 >
                   Instagram
                 </a>
@@ -67,7 +67,7 @@ export function Footer() {
                   href="https://tiktok.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors cursor-pointer"
+                  className="inline-flex min-h-[40px] items-center text-sm text-foreground/70 transition-colors hover:text-foreground"
                 >
                   TikTok
                 </a>
@@ -77,7 +77,7 @@ export function Footer() {
                   href="https://etsy.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-foreground/70 hover:text-foreground transition-colors cursor-pointer"
+                  className="inline-flex min-h-[40px] items-center text-sm text-foreground/70 transition-colors hover:text-foreground"
                 >
                   Etsy
                 </a>
@@ -92,7 +92,7 @@ export function Footer() {
           </p>
           <Link
             href="/cakra-testi"
-            className="text-xs text-accent hover:underline cursor-pointer"
+            className="inline-flex min-h-[44px] items-center text-xs text-accent underline-offset-4 hover:underline"
           >
             Ritüeline başla &rarr;
           </Link>

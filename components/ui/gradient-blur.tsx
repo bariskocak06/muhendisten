@@ -172,11 +172,17 @@ export function GradientBlur({
       if (t) syncMouseFromEvent(t.clientX, t.clientY);
     };
 
+    const handleTouchStart = (e: TouchEvent) => {
+      const t = e.touches[0];
+      if (t) syncMouseFromEvent(t.clientX, t.clientY);
+    };
+
     mouseRef.current = { x: canvas.width / 2, y: canvas.height / 2 };
 
     const handleResize = () => resizeCanvas();
 
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
     window.addEventListener("touchmove", handleTouchMove, { passive: true });
     window.addEventListener("resize", handleResize);
 
@@ -218,6 +224,7 @@ export function GradientBlur({
       io?.disconnect();
       document.removeEventListener("visibilitychange", onVisibility);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("resize", handleResize);
       cancelLoop();

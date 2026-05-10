@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function ProductsPage() {
   return (
-    <div className="pt-28 pb-16 px-6 md:pt-32">
+    <div className="px-4 pb-16 pt-[calc(6.5rem+env(safe-area-inset-top,0px))] sm:px-6 md:pt-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,7 +18,7 @@ export default function ProductsPage() {
           <p className="text-[11px] tracking-[0.35em] uppercase text-spirit/80 mb-4">
             Koleksiyon
           </p>
-          <h1 className="font-heading text-5xl md:text-6xl font-light text-foreground">
+          <h1 className="font-heading text-[clamp(2rem,9vw,3.75rem)] font-light text-foreground sm:text-5xl md:text-6xl">
             Ritüel yağların
           </h1>
           <p className="mt-5 text-sm text-muted-foreground max-w-md mx-auto font-light leading-relaxed">
@@ -35,7 +35,7 @@ export default function ProductsPage() {
               transition={{ duration: 0.3, delay: i * 0.05 }}
             >
               <Link href={`/urunler/${product.slug}`} className="block cursor-pointer group">
-                <div className="rounded-2xl card-spirit p-8 h-full transition-all duration-300">
+                <div className="card-spirit h-full rounded-2xl p-6 transition-all duration-300 sm:p-8">
                   <div className="flex items-start justify-between mb-6">
                     <div
                       className="w-10 h-10 rounded-full opacity-75 ring-4 ring-white/70 shadow-inner group-hover:opacity-100 transition-opacity duration-200"
